@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `npm start` for runs the app in the development mode.
 
-In this project
-### CRUD operation with Auth validation.
-### User duplicate validation.
-### Store Hashed password.
+## In this project
+### * CRUD operation with Auth validation.
+### * User duplicate validation.
+### * Store Hashed password.
