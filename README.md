@@ -16,8 +16,4 @@ In the project directory, you can run:
 
 ## API Documentation
 
-<!-- ```sh
-https://documenter.getpostman.com/view/21021671/2s7YYscj3e?fbclid=IwAR3ABPuIp4MTLYqUBNSwHse9aR6Re2TAeD_tVRnva1XkR5Bzn4XRwP9Paq8
-``` -->
-
-[Documentation](https://documenter.getpostman.com/view/21021671/2s7YYscj3e?fbclid=IwAR3ABPuIp4MTLYqUBNSwHse9aR6Re2TAeD_tVRnva1XkR5Bzn4XRwP9Paq8)
+# [Documentation](https://documenter.getpostman.com/view/21021671/2s7YYscj3e?fbclid=IwAR3ABPuIp4MTLYqUBNSwHse9aR6Re2TAeD_tVRnva1XkR5Bzn4XRwP9Paq8)
