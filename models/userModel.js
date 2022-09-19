@@ -33,7 +33,7 @@ userSchema.statics.signup = async function (email, password, confirmPassword) {
     const hashedPassword = await bcrypt.hash(password, 11);
     const user = await this.create({ email, password: hashedPassword });
     return user;
-  }else{
+  } else {
     throw Error("Invalid Password");
   }
 };

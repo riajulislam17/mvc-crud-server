@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+require("dotenv").config();
 const PORT = process.env.PORT || 7000;
 app.use(express.json());
 
@@ -8,8 +9,7 @@ const bookRoutes = require("./routes/bookRoute");
 const userRoutes = require("./routes/userRoute");
 
 // connect to DB
-const url =
-  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.lkuqr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.lkuqr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 mongoose
   .connect(url, {
     useNewUrlParser: true,
