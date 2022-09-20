@@ -30,7 +30,7 @@ userSchema.statics.signup = async function (email, password, confirmPassword) {
   }
 
   if (password === confirmPassword) {
-    const hashedPassword = await bcrypt.hash(password, 11);
+    const hashedPassword = await bcrypt.hash(password, 12);
     const user = await this.create({ email, password: hashedPassword });
     return user;
   } else {
