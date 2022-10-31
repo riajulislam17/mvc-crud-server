@@ -1,8 +1,8 @@
 const UserModel = require("../models/userModel");
 const jwt = require("jsonwebtoken");
-require('dotenv').config();
+require("dotenv").config();
 
-const requireAuth = async (req, res, next) => {
+const requireAdmin = async (req, res, next) => {
   // verify user is authenticated
   const { Authorization } = req.headers;
 
@@ -16,10 +16,12 @@ const requireAuth = async (req, res, next) => {
     const { email } = jwt.verify(token, "SECRET_KEY");
 
     req.user = await UserModel.findOne({ email });
-    next();
+    if (req.user.role === "admin") {
+      next();
+    }
   } catch (error) {
     res.status(401).json({ error: "Unauthorized User" });
   }
 };
 
-module.exports = requireAuth;
+module.exports = requireAdmin;

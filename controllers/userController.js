@@ -20,11 +20,10 @@ const loginUser = async (req, res) => {
     const user = await UserModel.login(email, password);
     const token = jwt.sign(
       {
-        name: user.name,
-        email: user.email,
+        _id,
       },
       `${process.env.USER_TOKEN}`,
-      { expiresIn: "3d" }
+      { expiresIn: "1d" }
     );
 
     res.status(200).json({ email, token, message: "Login Successfully" });
